@@ -35,7 +35,7 @@ class PrototypesController < ApplicationController
     @prototype.assign_attributes(prototype_params)
     if @prototype.valid?
       @prototype.save
-      redirect_to '/'
+      redirect_to prototype_path
     else
       render :edit, status: :unprocessable_entity
     end
